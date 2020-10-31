@@ -1,0 +1,12 @@
+.container{width:1250px; height:800px; margin:5px auto;  }
+main{width:800px; height:450px; margin:0 50px;float:left}
+header{width:1000px;  height:110px;background-image: url("albümpaper/albümlogo.jpg"); background-repeat: no-repeat;margin-left: 250px}
+#mp3{width:500px;float:left;margin-left: 250px; border-color: black;}
+#albumstory{width:590px; height: 80px;margin: 5px auto; font-size:16px; background-color: silver;border:1px; border-radius: 10px; box-shadow:-10px -10px 4px black, 5px 5px 4px black;
+    padding: 15px 50px; font-weight: bold;float: left; margin-left: 425px; }
+
+aside{width:300px;height:500px; background-color: darkgray;float: left; border-radius: 10px;}
+aside ul{list-style:none }
+aside ul li a{display: block; height:40px;text-decoration: none; text-align:left; font-size: 16px;line-height:30px; color:#000000; }
+aside ul li a:hover{font-size:20px;font-weight: bold; color: aliceblue;}
+span{font-size:20px;font-weight: bold;}
