@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>websitem</title>
+<link href="stil.css" rel="stylesheet" type="text/css">
+</head>
+	
+	
+<script type="text/javascript">
+	window.addEventListener('load', (event) => {
+		
+		
+//___________bu kod slıderdakı onmouseover onmouseout olayını kontrol eder_______________//
+var  state_ = 'out'
+
+
+	function changeIn(e)
+	{
+		var id = e.target.getAttribute("id")
+		z = id
+		autoslide()
+		state_ = 'in'
+	}
+
+	function changeOut(e)
+	{
+		var id = e.target.getAttribute("id")
+		z = id
+		autoslide()
+		state_ = 'out'
+	}
+
+	document.querySelectorAll('#slidernumber li').forEach(sliderItem => {
+		sliderItem.addEventListener('mouseenter',changeIn)
+		sliderItem.addEventListener('mouseleave',changeOut)
+	})
+
+
+//________________________________end______________________________________________//
+	
+		
+	//___________BU KOD RESİMLERİN OTOMATİK GEÇİŞİNİ SAĞLAR_______________//
+var resimler= new Array("url(homepics/sarki0.jpeg)","url(homepics/sarki1.jpeg)","url(homepics/sarki2.jpeg)","url(homepics/sarki3.jpeg)","url(homepics/sarki4.jpeg)","url(homepics/sarki5.jpeg)","url(homepics/sarki6.jpeg)","url(homepics/sarki7.jpeg)","url(homepics/sarki8.jpeg)","url(homepics/sarki9.jpeg)","url(homepics/sarki10.jpeg)");
+window.setInterval(autoslide,3000)
+var z=0; // sliderın hangi resimde olduğunu gösteriyor
+	function autoslide()
+	{
+		if (state_ == 'out')
+		{
+			console.log("out oldu")
+			document.getElementById("slayt").style.background=resimler[z];
+			document.getElementById("albumstory").innerHTML=story[z];
+			for(var i=1;i<11;i++)
+				{
+					if(z==i)
+						{document.getElementById(""+i).style.background="red";}
+					else
+						{document.getElementById(""+i).style.background="black";}
+				}
+			// console.log(z)
+			z++
+			if(z==11)
+				{z=0;}
+		}	
+	}
+	//______________________________END___________________________________//
+	
+
+	//________bu kod sliderea baglı olarak arka plan rengının degısımını saglar._______//
+		var colorbg=new Array("#FFFFFF","#000000","#000000","#222222","#444444","#666666","#888888","#AAAAAA","#CCCCCC","#DDDDDD","#EEEEEE","#FFFFFF")
+		window.setInterval(changecolorbg,3000)
+		function changecolorbg()
+		{
+			document.getElementById("container1").style.background=colorbg[z];
+			if (z>5  ||z==0)
+			{
+			
+				var links = document.getElementsByTagName("a");
+				for (var i = 5; i<links.length; i++) {
+					links[i].style.color ="black";	
+				}
+			}
+			else
+			{
+				var links = document.getElementsByTagName("a");
+				for (var i = 5; i<links.length; i++) {
+					links[i].style.color = "white";	
+				}
+			}
+				
+		}
+	//________________________________end______________________________________________
+	var story= new Array("GEÇMİŞTEN GELECEĞE UZANAN ve ŞUAN YAŞANMAKTA OLAN GERÇEK BİR HAYAT HİKAYESİ...","Albümün hikayesi şöyle başlıyor idi: kalabalık bir ailede yeterli sevgi görememiş şekilde yetişen bir adamın kaldırımlar şiiri ile tanışması lise son yılında olmuştu. Bu mısralar onun hayatının bazı küçük kesitlerinin yazıya dökülmüş hali gibiydi...",
+	"...Hayatın zorlukları bu adamı daha da büyütmüş, daha da olgunlaştırmıştı ve artık üniversiteye başlamıştı. Önceki dönemlere göre daha rahattı çünkü burada onu o yapan fikirleriydi. Yıllar hızla geçiyor ve hayatının sonbaharına yol almakta olan gencimiz 2.sınıfa gelmişti ama içinde bir şeyler eksikti çocukluğundan kalma...",
+	"...Sessiz, sakin, verilen işleri titizlikle yapan, melankolik havaya sahip Raif Efendiyi anımsatan bu gencimiz, ilk tanışması romandaki gibi olmasa da , farklı zamanlarda aynı resim sergisinde bulunaraktan hayatının Kürk Mantolu Madonna’sıyla ikinci kez tanışmıştı belki de artık...",
+	"…Bu tanışıklığın ardından gencimizin kafasında soru işaretleri vardı, pek bir tecrübesizdi insan ilişkilerinde, sorularına cevap bulmak için denk gelmeye uğraşan gencimiz birkaç kez sonuç alsa da yeterli olamamış ve aklındaki belirsizlikle beraber içindeki hisler yavaş yavaş bir sevda ateşine dönüşmekteydi…",
+	"...Birkaç ay sonra pandemi sebebiyle okullar tatil edilmiş ve onu uzun bir süre görememek durumundaydı. Meraklar içerisinde idi arada bir yazışsalar da tam olarak onun gencimize olan düşüncelerini analizleyememişti. Ona anlatmak istedikleri vardı, haykırmak istedikleri, itiraf etmek istedikleri ama YAPAMADI...",
+	"…Pandemi döneminde geceleri onu düşünerek geçiriyor, onunla beraber asmalı yolunda yürüdüğü günü hatırlayarak elleri ellerine değerekten o anı tekrar yaşıyor ve bir gün gerçek olacağı umuduyla onun hayaline sarılarak uyuyordu… ",
+	"…Tanışalı 10 ay olmuş, günler aylar geçmiyordu onu düşünerekten. Belki sana yazarım dediği gün artık gerçek oluyordu. Doğsun artık gün bir bana dediği günler yakınlarda mıydı…",
+	"…Gencimizi uzun süredir yoran aklındaki belirsizlik artık noktalanmalıydı, bir durağa gelmeliydiler. Bu durak beraber göğe bakabilecekleri bir durak mıydı yoksa son durak mıydı, her şey artık kızın avucundaki kelebekteydi…",
+	"…Evet, bu adam artık ona ne kadar çok aşık olduğunu itiraf edebilmiş idi. Hayalleri gerçek olabilecek miydi yoksa hayallerini öldürecek miydi, ondan artık er yada gec bir yanıt bekliyordu…",
+	"…Evet, artık onun adını da haykırmaktaydı. Sonunda içindekileri anlatabilmişti, haykırabilmişti, YAPABİLMİŞTİ artık. Damlaların elmacıklarına karışmasına izin vermemesini umuyordu bu adam ondan. Belki de cayır cayır yanacak canı gencimizin ama alışkındı zaten yalnızlığa, alışacaktı elbet onsuzluğa ve sonuç her ne olursa olsun yarın için umutla bakmaya , çalışmaya devam edecekti…")
+
+
+	
+
+		
+		
+});	
+</script>
+
+
+<body >
+	<div class="container" id="container1" >
+		<header>
+			<figure><img alt="" src="homepics/logo.png"></figure>
+			<aside ><img alt="" src="homepics/banner.jpg"> </aside>
+		</header>
+		<nav id="menu">
+			<ul>
+			<li><a href="">BEN KİM MİYİM?</a></li>
+			<li><a href="">PROJELER</a></li>
+			<li><a href="">ALBÜMLERİM</a></li>
+			<li><a href="">ÇALIŞMALARIM</a></li>
+			<li><a href="callme/callme.html" target="_blank">CALL ME</a></li>
+			</ul>
+		</nav>
+		<aside id="aside1">
+			<ul>
+				
+				<li><a>SON YAYINLANANLAR</a></li>
+				<li><a href="albüm_sekmesi/sarki1.html" target="_blank">Kaldırımlar</a></li>
+				<li><a href="albüm_sekmesi/sarki5.html" target="_blank">Anlatamıyorum</a></li>
+				<li><a href="albüm_sekmesi/sarki2.html" target="_blank">İstanbulda Sonbahar</a></li>
+				<li><a href="albüm_sekmesi/sarki4.html" target="_blank">Sevdan Bir Ateş</a></li>
+				<li><a href="albüm_sekmesi/sarki7.html" target="_blank">Aşk Durdukça</a></li>
+				<li><a href="albüm_sekmesi/sarki10.html" target="_blank">Durma Yağmur Durma</a></li>
+				<li><a href="albüm_sekmesi/sarki9.html" target="_blank">Çok Aşık</a></li>
+				<br><br><br><br><br><br>
+				<li><a>ÇOK YAKINDA YAYINDA...</a></li>
+				<li><a href="albüm_sekmesi/sarki8.html" target="_blank">Göğe Bakma Durağı</a></li>
+				<li><a href="albüm_sekmesi/sarki3.html" target="_blank">BESTE 3</a></li>
+				<li><a href="albüm_sekmesi/sarki6.html" target="_blank">Elleri Ellerime</a></li>
+			</ul>
+		</aside>
+		<main>
+		<section id="albumlogo"><img src="homepics/albümlogo.jpeg"></section>
+		<section id="slayt"></section>
+		<div id="slidernumber">
+			<ul>
+				<li id="1">1</li>
+				<li id="2">2</li>
+				<li id="3">3</li>
+				<li id="4">4</li>
+				<li id="5">5</li>
+				<li id="6">6</li>
+				<li id="7">7</li>
+				<li id="8">8</li>
+				<li id="9">9</li>
+				<li id="10">10</li>
+			</ul>
+		</div>
+		<section id="albumstory"></section>
+        </main>
+		<footer>
+		
+		</footer>
+	</div>
+</body>
+</html>
+		
+
+

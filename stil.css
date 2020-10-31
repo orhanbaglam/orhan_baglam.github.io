@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+#container1{height:1200px; width: 1000px ; border: 0 ; margin:10px auto ; padding:30px 60px ;background:black;}
+header{width:1000px ; height:200px ; border: 0; float:left}
+header figure{height: 200px ; width: 200px ; border:0 ; float:left ; margin:0 ; padding:0  }
+header aside{height: 200px ; width: 800px ; border: 0 ; float:left ; margin:0 ; padding:0 }
+
+
+main{height: 600px ; width: 695px ; border:0 ; float:left ;border-radius: 20px  ;margin:5px 0 0 5px}
+
+#menu{height: 40px ; width:1000px ; border:0  ; float:left ; margin-top: 10px ;border-radius: 10px;background-color: #000000}
+#menu ul{list-style:none; margin:0; padding: 0 }
+#menu ul li{float: left }
+#menu ul li a{display: block; width: 200px ; height: 40px; border-radius: 10px;text-decoration: none; text-align: center; line-height: 40px; color:aliceblue ;background-color: #000000}
+#menu ul li a:hover{background-color: #888181 }
+
+#aside1{height: 600px ; width: 300px ; border:0 ; float:left ;border-radius: 20px ; margin:50px 0 0 0;}
+#aside1 ul{list-style:none }
+#aside1 ul li a{ text-decoration: none; text-align: center; font-size: 20px;line-height:30px; color:#000000; }
+#aside1 ul li a:hover{text-decoration: underline;}
+
+
+#albumlogo{width:652px; height: 100px}
+#albumstory{width:590px; height: 90px;margin-left: 30px; font-size:16px; background-color: silver;border:1px; border-radius: 10px; box-shadow:-10px -10px 4px white, 5px 5px 4px white;
+    padding: 10px; font-weight: bold; }
+
+#slayt{height:600px; width:600px ; border: 0; background-repeat: no-repeat;margin-left: 26px  }
+#slidernumber{width:300px ;height:30px; margin:0 auto; color: aliceblue}
+#slidernumber ul{list-style: none; padding: 0; margin:0}
+#slidernumber li{display: block; float: left; height:30px; width:30px;line-height: 30px; text-align: center;background-color: #000000;}
+#slidernumber li:hover{background-color: #F50206}
+
+  
+
